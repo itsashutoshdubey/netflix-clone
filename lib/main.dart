@@ -3,7 +3,7 @@ import 'package:netflix/new/home1.dart';
 import 'package:netflix/new/splashscreen.dart';
 import 'package:netflix/utils/text.dart';
 
-//import 'package:netflix/tmdb_api.dart';
+
 
 import 'package:http/http.dart' as http;
 
@@ -20,56 +20,4 @@ class MyApp extends StatelessWidget {
   }
 }
 
-/*
-class Home extends StatefulWidget {
-  @override
-  _HomeState createState() => _HomeState();
-}
 
-class _HomeState extends State<Home> {
-  final String apikey = '67af5e631dcbb4d0981b06996fcd47bc';
-  final String readaccesstoken =
-      'eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI2N2FmNWU2MzFkY2JiNGQwOTgxYjA2OTk2ZmNkNDdiYyIsInN1YiI6IjYwNzQ1OTA0ZjkyNTMyMDAyOTFmZDczYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.C_Bkz_T8OybTGo3HfYsESNjN46LBYdw3LHdF-1TzYYs';
-  List trendingmovies = [];
-  List topratedmovies = [];
-  List tv = [];
-
-  @override
-  void initState() {
-    super.initState();
-    loadmovies();
-  }
-
-  loadmovies() async {
-    TMDB tmdbWithCustomLogs = TMDB(
-      ApiKeys(apikey, readaccesstoken),
-      logConfig: ConfigLogger(
-        showLogs: true,
-        showErrorLogs: true,
-      ),
-    );
-
-    Map trendingresult = await tmdbWithCustomLogs.v3.trending.getTrending();
-    Map topratedresult = await tmdbWithCustomLogs.v3.movies.getTopRated();
-    Map tvresult = await tmdbWithCustomLogs.v3.tv.getPouplar();
-    print((trendingresult));
-    setState(() {
-      trendingmovies = trendingresult['results'];
-      topratedmovies = topratedresult['results'];
-      tv = tvresult['results'];
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-        backgroundColor: Colors.black,
-        appBar: AppBar(
-          title: modified_text(text: 'Netflix', color: Colors.red, size: 12,),
-          backgroundColor: Colors.transparent,
-        ),
-        body: Home1()
-    );
-  }
-}
-*/
